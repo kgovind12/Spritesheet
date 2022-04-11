@@ -1,0 +1,30 @@
+:root {
+    --spritesheet-width: 9600px;
+    --num-frames: 16;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.cow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url('spritesheet.png') no-repeat;
+    animation: move 0.8s steps(var(--num-frames)) infinite alternate;
+    width: calc(var(--spritesheet-width) / var(--num-frames));
+    height: 800px;
+}
+
+@keyframes move {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: calc(-1 * var(--spritesheet-width));
+    }
+}
