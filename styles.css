@@ -9,7 +9,7 @@ body {
     position: relative;
 }
 
-.cow {
+.spritesheet {
     position: absolute;
     left: 50%;
     top: 50%;
